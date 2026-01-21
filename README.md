@@ -43,7 +43,7 @@ from deep_research.state import ResearchState
 
 async def main():
     app = create_research_graph()
-    
+
     initial_state: ResearchState = {
         "query": "Your research question here",
         "research_plan": "",
@@ -59,7 +59,7 @@ async def main():
         "identified_gaps": [],
         "follow_up_tasks": []
     }
-    
+
     final_state = await app.ainvoke(initial_state)
     print(final_state["final_output"])
 
